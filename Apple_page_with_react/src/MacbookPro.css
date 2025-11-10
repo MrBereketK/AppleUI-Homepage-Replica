@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* The first page section */
+.first-page {
+    text-align: center;
+    background-color: RGB(250, 250, 250);
+}
+.small-detail{
+    font-size: 18px;
+    color: gray;
+    margin-top: 20px;
+}
+.product-name{
+    font-size: 55px;
+    font-weight: bold;
+}
+.product-description{
+    font-size: 55px;
+    font-weight: normal;
+}
+.options ul{
+    cursor: pointer;
+    text-underline-offset: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.options ul a {
+    color: #06c;
+    text-decoration: none;
+}
+.options ul a:hover{
+    color: var(--hover-color);
+}
+.mac-pc{
+    background-color: RGB(250, 250, 250);
+}
