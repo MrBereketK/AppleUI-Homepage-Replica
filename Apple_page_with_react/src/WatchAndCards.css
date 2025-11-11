@@ -1,0 +1,31 @@
+      .page {
+    background-color:white;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+.page .box{
+    background-color: RGB(249, 249, 249);
+    padding-top: 50px;
+    flex: 1;
+    margin-top: 15px;
+}
+.product-desc {
+    font-size: 23px;
+    color: gray;
+    margin-top: 10px;
+}
+.box-img {
+    width: 100%;
+    height: 400px;
+}
+.watch{
+    background: url("./assets/images/home/watch-series-5.jpg") no-repeat center;
+    background-position: bottom;
+    background-size: 200%;
+}
+.apple-card{
+    background: url("./assets/images/home/apple-card.jpg") no-repeat center;
+    background-position: bottom;
+    background-size: 200%;
+}
