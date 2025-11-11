@@ -5,6 +5,7 @@ import MacbookPro from "./MacbookPro";
 import Iphone11Pro from "./Iphone11Pro";
 import Iphone11 from "./Iphone11";
 import WatchAndCards from "./WatchAndCards";
+import AppleTvAndAirpod from "./AppleTvAndAirpod";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Iphone11Pro />
       <Iphone11 />
       <WatchAndCards />
+      <AppleTvAndAirpod />
       <Footer />
     </>
   );

@@ -1,0 +1,57 @@
+.page {
+    background-color:white;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+.page .box{
+    background-color: RGB(249, 249, 249);
+    padding-top: 50px;
+    flex: 1;
+    margin-top: 15px;
+}
+.product-desc {
+    font-size: 23px;
+    color: gray;
+    margin-top: 10px;
+}
+.box-img {
+    width: 100%;
+    height: 400px;
+}
+
+#baby-image {
+    width: 100%;
+    height: 450px;
+    background: url("./assets/images/home/apple-tv-background.jpg") no-repeat center;
+    background-size: 200%;
+}
+.airpods-pro{
+    width: 100%;
+    height: 350px;
+    background: url("./assets/images/home/air-pods.jpg") no-repeat center;
+    background-size: 30%;
+}
+#airpod{
+    background-color: black;
+    color: white;
+}
+#appletv-logo-desc{
+    padding-top: 100px;
+}
+#appletv-link{
+    padding-top: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#appletv-link a{
+    text-decoration: none;
+    font-size: 20px;
+}
+#appletv-link a:hover{
+    color: red;
+}
+.fifth-page{
+    margin-top: 5px;
+    background-color: RGB(249, 249, 249);
+}
