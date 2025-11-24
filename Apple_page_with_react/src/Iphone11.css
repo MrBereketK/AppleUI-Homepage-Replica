@@ -1,35 +1,62 @@
-
 .third-page {
-    text-align: center;
+  text-align: center;
 }
 .third-page .first-div {
-    padding-top: 50px;
-    background-color: RGB(250, 250, 250);
+  padding-top: 50px;
+  background-color: RGB(250, 250, 250);
 }
-.iphone-11{
-    width: 100%;
-    height: 450px;
-    background: url("./assets/images/home/iphone11-bg.jpg") no-repeat center;
-    background-size: 220%;
-    background-position: bottom; 
+.iphone-11 {
+  width: 100%;
+  height: 450px;
+  background: url("./assets/images/home/iphone11-bg.jpg") no-repeat center;
+  background-size: 220%;
+  background-position: bottom;
 }
 
 /* Mobile and tab view for the second and third page sections */
 @media (max-width: 1000px) {
-    .iphone-pro, .iphone-11{
-        background-size: 250%;
-        height: 450px;
-    }
+  .iphone-pro,
+  .iphone-11 {
+    background-size: 250%;
+    height: 450px;
+  }
+  .third-page .first-div {
+    padding-top: 40px;
+  }
 }
 @media (max-width: 800px) {
-    .iphone-pro, .iphone-11{
-        background-size: 300%;
-        height: 400px;
-    }
+  .iphone-pro,
+  .iphone-11 {
+    background-size: 300%;
+    height: 400px;
+  }
+  .third-page .first-div {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media (max-width: 600px) {
-    .iphone-pro, .iphone-11{
-        background-size: 350%;
-        height: 350px;
-    }
+  .iphone-pro,
+  .iphone-11 {
+    background-size: 350%;
+    height: 350px;
+  }
+  .third-page .first-div {
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .iphone-pro,
+  .iphone-11 {
+    background-size: 400%;
+    height: 300px;
+  }
+  .third-page .first-div {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

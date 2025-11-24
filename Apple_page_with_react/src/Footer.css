@@ -12,6 +12,9 @@
     font-size: 13px;
     background-color: RGB(249, 249, 249);
 }
+.sixth-page > div:first-child {
+    line-height: 1.6;
+}
 .end ul{
     list-style: none;
     margin-bottom: 20px; 
@@ -21,10 +24,16 @@
 }
 .end ul li:first-child{
     color: black;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 .end ul li a{
     color: #999;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+.end ul li a:hover {
+    color: #06c;
 }
 
 .end {
@@ -73,4 +82,91 @@ display: flex;
 align-items: center;
 justify-content: flex-end;
 gap: 5px;
+}
+.footer-right .flag {
+    width: 16px;
+    height: auto;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .sixth-page {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .end {
+        gap: 60px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .sixth-page {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 12px;
+    }
+    .sixth-page > div:first-child {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+    .end {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .end div {
+        width: 100%;
+    }
+    .end ul {
+        margin-bottom: 15px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 20px;
+        text-align: center;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .footer-center {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-center a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sixth-page {
+        padding-top: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 11px;
+    }
+    .sixth-page > div:first-child {
+        font-size: 10px;
+    }
+    .end {
+        gap: 25px;
+    }
+    .end ul li {
+        margin: 3px;
+        font-size: 12px;
+    }
+    .footer {
+        padding: 15px 15px;
+        font-size: 11px;
+    }
+    .footer-center a {
+        font-size: 11px;
+        margin: 3px;
+    }
 }

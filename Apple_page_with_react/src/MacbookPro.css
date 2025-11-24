@@ -41,4 +41,72 @@
 }
 .mac-pc{
     background-color: RGB(250, 250, 250);
+    margin-top: 20px;
+    text-align: center;
+}
+.mac-pc img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .product-name,
+    .product-description {
+        font-size: 45px;
+    }
+    .small-detail {
+        font-size: 16px;
+    }
+    .options ul {
+        font-size: 18px;
+        gap: 15px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .first-page {
+        padding: 15px;
+    }
+    .product-name,
+    .product-description {
+        font-size: 32px;
+    }
+    .small-detail {
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .options ul {
+        font-size: 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .mac-pc {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .first-page {
+        padding: 10px;
+    }
+    .product-name,
+    .product-description {
+        font-size: 24px;
+    }
+    .small-detail {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .options ul {
+        font-size: 14px;
+        gap: 10px;
+    }
+    .mac-pc {
+        margin-top: 10px;
+    }
 }

@@ -6,11 +6,18 @@
 .navigation-bar{
     background-color: black;
     padding: 10px 150px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    position: relative;
 }
 #header-list{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
 }
 #header-list img{
@@ -20,24 +27,107 @@
 #header-list li {
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    white-space: nowrap;
 }
 #header-list li:hover {
     cursor: pointer;
-    opacity: 1;;
+    opacity: 1;
 }
-
+.logo-item {
+    opacity: 1 !important;
+}
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    gap: 5px;
+}
+.hamburger-line {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+.hamburger-line.open:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+.hamburger-line.open:nth-child(2) {
+    opacity: 0;
+}
+.hamburger-line.open:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
 
 /* Tablet view */
 @media (max-width: 800px) {
-
     .navigation-bar{
-    padding: 10px 80px;
+        padding: 10px 40px;
+    }
+    #header-list li {
+        font-size: 14px;
+        margin: 0 8px;
     }
 }
-/* mobile view */
-@media (max-width: 600px) {
 
-    .navigation-bar{
-    padding: 10px 50px;
+/* Mobile view */
+@media (max-width: 768px) {
+    .navigation-bar {
+        padding: 12px 20px;
+    }
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #header-list {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        padding: 20px;
+        gap: 15px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #header-list.menu-open {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        padding: 20px;
+    }
+    #header-list li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    #header-list li:last-child {
+        border-bottom: none;
+    }
+    .logo-item {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation-bar {
+        padding: 10px 15px;
+    }
+    #header-list {
+        padding: 15px;
+    }
+    #header-list.menu-open {
+        padding: 15px;
     }
 }
