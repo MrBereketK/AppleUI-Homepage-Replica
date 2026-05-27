@@ -106,124 +106,100 @@
 
 /* Mobile view */
 @media (max-width: 768px) {
-
-  /* Make the Apple TV section flow naturally */
-  #baby-image {
-    height: auto;             /* let content define height */
-    padding: 40px 0;          /* spacing */
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
-    position: relative;
-  }
-
-  /* Remove absolute positioning */
-  #appletv-logo,
-  #appletv-logo-desc,
-  #appletv-link {
-    position: static;
-    transform: none;
-    margin-top: 15px;
-  }
-
-  #appletv-logo img { max-width: 60%; }
-  #appletv-logo-desc img { max-width: 70%; }
-  #appletv-link a { font-size: 17px; }
-
-  /* Rest of your mobile layout */
   .page {
     flex-direction: column;
-    gap: 0;
+    gap: 10px;
   }
-
   .page .box {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 0;
+    margin-top: 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
-
   .product-desc {
-    font-size: 19px;
-    padding: 0 20px;
-    margin-top: 15px;
+    font-size: 18px;
+    padding: 0 15px;
   }
-
-  .box-img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-  }
-
-  .airpods-pro {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  #baby-image {
+    height: 350px;
+    background-size: 250%;
     margin-top: 0;
   }
-
+  #appletv-logo {
+    top: 30px;
+  }
+  #appletv-logo img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  #appletv-logo-desc {
+    top: 100px;
+  }
+  #appletv-logo-desc img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  #appletv-link {
+    top: 280px;
+  }
+  #appletv-link a {
+    font-size: 18px;
+  }
+  #airpod {
+    padding-top: 30px;
+  }
+  .box-img {
+    height: 300px;
+  }
+  .airpods-pro {
+    height: 300px;
+    background-size: contain;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 480px) {
   .page .box {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 15px;
   }
-
   .product-desc {
-    font-size: 17px;
-    padding: 0 15px;
-    margin-top: 12px;
+    font-size: 16px;
+    padding: 0 10px;
   }
-
-  /* Keep the same mobile layout behavior */
   #baby-image {
-    height: auto;
-    padding: 30px 0;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 300px;
+    background-size: 300%;
+    margin-top: 0;
   }
-
-  /* Remove absolute positioning completely */
-  #appletv-logo,
-  #appletv-logo-desc,
-  #appletv-link {
-    position: static;
-    transform: none;
-    margin-top: 12px;
+  #appletv-logo {
+    top: 20px;
   }
-
   #appletv-logo img {
-    max-width: 55%;
+    max-width: 70%;
+    margin: 0 auto;
   }
-
+  #appletv-logo-desc {
+    top: 80px;
+  }
   #appletv-logo-desc img {
-    max-width: 65%;
+    max-width: 70%;
+    margin: 0 auto;
   }
-
+  #appletv-link {
+    top: 240px;
+  }
   #appletv-link a {
     font-size: 16px;
   }
-
   #airpod {
-    padding-top: 25px;
+    padding-top: 20px;
   }
-
   .box-img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 250px;
   }
-
   .airpods-pro {
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 250px;
     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-top: 15px;
   }
 }
