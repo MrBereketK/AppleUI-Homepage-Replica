@@ -14,8 +14,37 @@ function Header() {
   return (
     <nav className="navigation-bar">
       <div className="nav-container">
+        {/* Mobile Top Bar - always visible on mobile */}
+        <div className="nav-mobile-bar">
+          <a href="#" className="mobile-logo-link">
+            <img src={logo} alt="Apple logo" className="mobile-logo-img" />
+          </a>
+          <div className="nav-mobile-controls">
+            <a href="#" className="mobile-cart-link">
+              <img src={cartIcon} alt="Shopping cart" className="mobile-cart-img" />
+            </a>
+            <button
+              className="hamburger-menu"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <span
+                className={isMenuOpen ? "hamburger-line open" : "hamburger-line"}
+              ></span>
+              <span
+                className={isMenuOpen ? "hamburger-line open" : "hamburger-line"}
+              ></span>
+              <span
+                className={isMenuOpen ? "hamburger-line open" : "hamburger-line"}
+              ></span>
+            </button>
+          </div>
+        </div>
+
+        {/* Navigation list */}
         <ul id="header-list" className={isMenuOpen ? "menu-open" : ""}>
-          <li className="logo-item">
+          {/* Logo only on desktop */}
+          <li className="logo-item desktop-only">
             <img src={logo} alt="Apple logo" />
           </li>
           <li>Mac</li>
@@ -25,28 +54,13 @@ function Header() {
           <li>tv</li>
           <li>Music</li>
           <li>Support</li>
-          <li className="icon-item">
+          <li className="icon-item desktop-only">
             <img src={searchIcon} alt="Search" />
           </li>
-          <li className="icon-item">
+          <li className="icon-item desktop-only">
             <img src={cartIcon} alt="Shopping cart" />
           </li>
         </ul>
-        <button
-          className="hamburger-menu"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={isMenuOpen ? "hamburger-line open" : "hamburger-line"}
-          ></span>
-          <span
-            className={isMenuOpen ? "hamburger-line open" : "hamburger-line"}
-          ></span>
-          <span
-            className={isMenuOpen ? "hamburger-line open" : "hamburger-line"}
-          ></span>
-        </button>
       </div>
     </nav>
   );

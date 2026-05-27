@@ -121,7 +121,7 @@
   }
   #baby-image {
     height: 350px;
-    background-size: 250%;
+    background-size: cover;
     margin-top: 0;
   }
   #appletv-logo {
@@ -168,7 +168,7 @@
   }
   #baby-image {
     height: 300px;
-    background-size: 300%;
+    background-size: cover;
     margin-top: 0;
   }
   #appletv-logo {

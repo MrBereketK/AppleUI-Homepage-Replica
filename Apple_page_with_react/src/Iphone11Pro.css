@@ -29,7 +29,8 @@
 /* Mobile and tab view for the second and third page sections */
 @media (max-width: 1000px) {
     .iphone-pro, .iphone-11{
-        background-size: 250%;
+        background-size: auto 75%;
+        background-position: bottom center;
         height: 450px;
     }
     .second-page .first-div {
@@ -41,7 +42,8 @@
 }
 @media (max-width: 800px) {
     .iphone-pro, .iphone-11{
-        background-size: 300%;
+        background-size: auto 70%;
+        background-position: bottom center;
         height: 400px;
     }
     .second-page .first-div {
@@ -55,7 +57,8 @@
 }
 @media (max-width: 600px) {
     .iphone-pro, .iphone-11{
-        background-size: 350%;
+        background-size: auto 65%;
+        background-position: bottom center;
         height: 350px;
     }
     .second-page .first-div {
@@ -69,7 +72,8 @@
 }
 @media (max-width: 480px) {
     .iphone-pro, .iphone-11{
-        background-size: 400%;
+        background-size: auto 60%;
+        background-position: bottom center;
         height: 300px;
     }
     .second-page .first-div {

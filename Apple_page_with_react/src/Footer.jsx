@@ -1,116 +1,179 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Footer.css'
 import UsFlag from './assets/images/icons/16.png'
 
 export default function Footer() {
+  const [openSections, setOpenSections] = useState({});
+
+  const toggleSection = (id) => {
+    setOpenSections(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   return (
     <footer className="sixth-page">
-        <div>1. Trade In: Trade‑in values vary. iPhone 11 and iPhone 11 Pro promotional pricing is after trade‑in of iPhone 8 Plus and iPhone X in good condition. Additional trade‑in values require purchase of a new iPhone, subject to availability and limits. Must be at least 18. Apple or its trade-in partners reserve the right to refuse or limit any Trade In transaction for any reason. In‑store trade‑in requires presentation of a valid, government-issued photo ID (local law may require saving this information). Sales tax may be assessed on full value of new iPhone. Additional terms from Apple or Apple’s trade-in partners may apply. Monthly pricing: Available to qualified customers and requires 0% APR, 24‑month installment loan with Citizens One, and iPhone activation with AT&T, Sprint, T‑Mobile, or Verizon. Full terms apply.</div>
+        <div className="footer-terms">1. Trade In: Trade‑in values vary. iPhone 11 and iPhone 11 Pro promotional pricing is after trade‑in of iPhone 8 Plus and iPhone X in good condition. Additional trade‑in values require purchase of a new iPhone, subject to availability and limits. Must be at least 18. Apple or its trade-in partners reserve the right to refuse or limit any Trade In transaction for any reason. In‑store trade‑in requires presentation of a valid, government-issued photo ID (local law may require saving this information). Sales tax may be assessed on full value of new iPhone. Additional terms from Apple or Apple’s trade-in partners may apply. Monthly pricing: Available to qualified customers and requires 0% APR, 24‑month installment loan with Citizens One, and iPhone activation with AT&T, Sprint, T‑Mobile, or Verizon. Full terms apply.</div>
 
         <br/>
         <hr/>
         <br/>
 
     <section className="end">
-        <div>
-            <ul>
-                <li>Shop and Learn</li>
-                <li><a href="#">Mac</a></li>
-                <li><a href="#">Ipad</a></li>
-                <li><a href="#">Iphone</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">TV</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">AirPods</a></li>
-                <li><a href="#">HomePod</a></li>
-                <li><a href="#">iPod touch</a></li>
-                <li><a href="#">Accessories</a></li>
-            </ul>
+        <div className="footer-col">
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('shopAndLearn')}>
+                    Shop and Learn
+                    <span className={`toggle-icon ${openSections['shopAndLearn'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['shopAndLearn'] ? 'show' : ''}>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">Ipad</a></li>
+                    <li><a href="#">Iphone</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">AirPods</a></li>
+                    <li><a href="#">HomePod</a></li>
+                    <li><a href="#">iPod touch</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-            <ul>
-                <li>Services</li>
-                <li><a href="#">Apple Music</a></li>
-                <li><a href="#">Apple News+</a></li>
-                <li><a href="#">Apple TV+</a></li>
-                <li><a href="#">Apple Arcade</a></li>
-                <li><a href="#">Apple Card</a></li>
-                <li><a href="#">iCloud</a></li>
-            </ul>
+        
+        <div className="footer-col">
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('services')}>
+                    Services
+                    <span className={`toggle-icon ${openSections['services'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['services'] ? 'show' : ''}>
+                    <li><a href="#">Apple Music</a></li>
+                    <li><a href="#">Apple News+</a></li>
+                    <li><a href="#">Apple TV+</a></li>
+                    <li><a href="#">Apple Arcade</a></li>
+                    <li><a href="#">Apple Card</a></li>
+                    <li><a href="#">iCloud</a></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li>Account</li>
-                <li><a href="#">Manage Your Apple ID</a></li>
-                <li><a href="#">Apple Store Account</a></li>
-                <li><a href="#">iCloud.com</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <ul>
-                <li>Apple Store</li>
-                <li><a href="#">Find a Store</a></li>
-                <li><a href="#">Genius Bar</a></li>
-                <li><a href="#">Today at Apple</a></li>
-                <li><a href="#">Apple Camp</a></li>
-                <li><a href="#">Field Trip</a></li>
-                <li><a href="#">Apple Store App</a></li>
-                <li><a href="#">Refurbished and Clearance</a></li>
-                <li><a href="#">Financing</a></li>
-                <li><a href="#">Order Status</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">Shopping Help</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li>For Business</li>
-                <li><a href="#">Apple and Business</a></li>
-                <li><a href="#">Shop for Business</a></li>
-            </ul>
-            <ul>
-                <li>For Education</li>
-                <li><a href="#">Apple and Education</a></li>
-                <li><a href="#">Shop for College</a></li>
-            </ul>
-
-            <ul>
-                <li>For Healthcare</li>
-                <li><a href="#">Manage Your Apple ID</a></li>
-                <li><a href="#">Apple Store Account</a></li>
-                <li><a href="#">iCloud.com</a></li>
-            </ul>
-
-            <ul>
-                <li>For Government</li>
-                <li><a href="#">Apple and Education</a></li>
-                <li><a href="#">Shop for College</a></li>
-            </ul>
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('account')}>
+                    Account
+                    <span className={`toggle-icon ${openSections['account'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['account'] ? 'show' : ''}>
+                    <li><a href="#">Manage Your Apple ID</a></li>
+                    <li><a href="#">Apple Store Account</a></li>
+                    <li><a href="#">iCloud.com</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div>
-            <ul>
-                <li>Apple Values</li>
-                <li><a href="#">Find a Store</a></li>
-                <li><a href="#">Genius Bar</a></li>
-                <li><a href="#">Today at Apple</a></li>
-                <li><a href="#">Apple Camp</a></li>
-                <li><a href="#">Field Trip</a></li>
-                <li><a href="#">Apple Store App</a></li>
-            </ul>
+        <div className="footer-col">
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('appleStore')}>
+                    Apple Store
+                    <span className={`toggle-icon ${openSections['appleStore'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['appleStore'] ? 'show' : ''}>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Genius Bar</a></li>
+                    <li><a href="#">Today at Apple</a></li>
+                    <li><a href="#">Apple Camp</a></li>
+                    <li><a href="#">Field Trip</a></li>
+                    <li><a href="#">Apple Store App</a></li>
+                    <li><a href="#">Refurbished and Clearance</a></li>
+                    <li><a href="#">Financing</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Shopping Help</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div className="footer-col">
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('forBusiness')}>
+                    For Business
+                    <span className={`toggle-icon ${openSections['forBusiness'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['forBusiness'] ? 'show' : ''}>
+                    <li><a href="#">Apple and Business</a></li>
+                    <li><a href="#">Shop for Business</a></li>
+                </ul>
+            </div>
+            
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('forEducation')}>
+                    For Education
+                    <span className={`toggle-icon ${openSections['forEducation'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['forEducation'] ? 'show' : ''}>
+                    <li><a href="#">Apple and Education</a></li>
+                    <li><a href="#">Shop for College</a></li>
+                </ul>
+            </div>
 
-            <ul>
-                <li>About Apple</li>
-                <li><a href="#">Find a Store</a></li>
-                <li><a href="#">Genius Bar</a></li>
-                <li><a href="#">Today at Apple</a></li>
-                <li><a href="#">Apple Camp</a></li>
-                <li><a href="#">Field Trip</a></li>
-                <li><a href="#">Apple Store App</a></li>
-            </ul>
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('forHealthcare')}>
+                    For Healthcare
+                    <span className={`toggle-icon ${openSections['forHealthcare'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['forHealthcare'] ? 'show' : ''}>
+                    <li><a href="#">Manage Your Apple ID</a></li>
+                    <li><a href="#">Apple Store Account</a></li>
+                    <li><a href="#">iCloud.com</a></li>
+                </ul>
+            </div>
+
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('forGovernment')}>
+                    For Government
+                    <span className={`toggle-icon ${openSections['forGovernment'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['forGovernment'] ? 'show' : ''}>
+                    <li><a href="#">Apple and Education</a></li>
+                    <li><a href="#">Shop for College</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div className="footer-col">
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('appleValues')}>
+                    Apple Values
+                    <span className={`toggle-icon ${openSections['appleValues'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['appleValues'] ? 'show' : ''}>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Genius Bar</a></li>
+                    <li><a href="#">Today at Apple</a></li>
+                    <li><a href="#">Apple Camp</a></li>
+                    <li><a href="#">Field Trip</a></li>
+                    <li><a href="#">Apple Store App</a></li>
+                </ul>
+            </div>
+
+            <div className="footer-accordion-section">
+                <h3 className="footer-section-title" onClick={() => toggleSection('aboutApple')}>
+                    About Apple
+                    <span className={`toggle-icon ${openSections['aboutApple'] ? 'open' : ''}`}></span>
+                </h3>
+                <ul className={openSections['aboutApple'] ? 'show' : ''}>
+                    <li><a href="#">Find a Store</a></li>
+                    <li><a href="#">Genius Bar</a></li>
+                    <li><a href="#">Today at Apple</a></li>
+                    <li><a href="#">Apple Camp</a></li>
+                    <li><a href="#">Field Trip</a></li>
+                    <li><a href="#">Apple Store App</a></li>
+                </ul>
+            </div>
         </div>
     </section>
-    <p>More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
+
+    <p className="more-ways-to-shop">More ways to shop: <a href="#">Find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 1-800-MY-APPLE.</p>
 
     <br/>
     

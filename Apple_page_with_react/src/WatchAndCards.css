@@ -69,10 +69,12 @@
         height: 300px;
     }
     .watch {
-        background-size: 250%;
+        background-size: auto 85%;
+        background-position: bottom center;
     }
     .apple-card {
-        background-size: 250%;
+        background-size: auto 80%;
+        background-position: bottom center;
     }
 }
 
@@ -89,9 +91,11 @@
         height: 250px;
     }
     .watch {
-        background-size: 300%;
+        background-size: auto 80%;
+        background-position: bottom center;
     }
     .apple-card {
-        background-size: 300%;
+        background-size: auto 75%;
+        background-position: bottom center;
     }
 }

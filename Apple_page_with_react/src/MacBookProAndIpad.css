@@ -78,7 +78,8 @@
         height: 300px;
     }
     .new-ipad {
-        background-size: 250%;
+        background-size: auto 85%;
+        background-position: bottom center;
     }
     .mac-laptop {
         background-size: contain;
@@ -101,7 +102,8 @@
         height: 250px;
     }
     .new-ipad {
-        background-size: 300%;
+        background-size: auto 80%;
+        background-position: bottom center;
     }
     .mac-laptop {
         background-size: contain;
