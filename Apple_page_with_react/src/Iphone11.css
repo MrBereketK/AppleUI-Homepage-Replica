@@ -17,7 +17,7 @@
 @media (max-width: 1000px) {
   .iphone-pro,
   .iphone-11 {
-    background-size: auto 75%;
+    background-size: auto 85%;
     background-position: bottom center;
     height: 450px;
   }
@@ -28,7 +28,7 @@
 @media (max-width: 800px) {
   .iphone-pro,
   .iphone-11 {
-    background-size: auto 70%;
+    background-size: auto 85%;
     background-position: bottom center;
     height: 400px;
   }
@@ -41,7 +41,7 @@
 @media (max-width: 600px) {
   .iphone-pro,
   .iphone-11 {
-    background-size: auto 65%;
+    background-size: auto 85%;
     background-position: bottom center;
     height: 350px;
   }
@@ -54,7 +54,7 @@
 @media (max-width: 480px) {
   .iphone-pro,
   .iphone-11 {
-    background-size: auto 60%;
+    background-size: auto 85%;
     background-position: bottom center;
     height: 300px;
   }

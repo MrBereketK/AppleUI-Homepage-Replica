@@ -24,34 +24,29 @@
 #baby-image {
   width: 100%;
   height: 450px;
-  background: url("./assets/images/home/apple-tv-background.jpg") no-repeat
-    center;
-  background-size: 200%;
+  background: url("./assets/images/home/apple-tv-background.jpg") no-repeat center;
+  background-size: cover;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+  padding-bottom: 20px;
   text-align: center;
 }
 #appletv-logo {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-bottom: 10px;
 }
 #appletv-logo img,
 #appletv-logo-desc img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 #appletv-logo-desc {
-  position: absolute;
-  top: 150px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-top: 0;
+  margin-bottom: 20px;
 }
 .airpods-pro {
   width: 100%;
@@ -65,11 +60,6 @@
   color: white;
 }
 #appletv-link {
-  position: absolute;
-  top: 350px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 0;
   cursor: pointer;
 }
 #appletv-link a {
@@ -93,14 +83,8 @@
   .product-desc {
     font-size: 20px;
   }
-  #appletv-logo {
-    top: 40px;
-  }
-  #appletv-logo-desc {
-    top: 120px;
-  }
-  #appletv-link {
-    top: 320px;
+  #baby-image {
+    padding-top: 40px;
   }
 }
 
@@ -123,23 +107,16 @@
     height: 350px;
     background-size: cover;
     margin-top: 0;
-  }
-  #appletv-logo {
-    top: 30px;
+    padding-top: 30px;
   }
   #appletv-logo img {
     max-width: 80%;
-    margin: 0 auto;
-  }
-  #appletv-logo-desc {
-    top: 100px;
   }
   #appletv-logo-desc img {
     max-width: 80%;
-    margin: 0 auto;
   }
-  #appletv-link {
-    top: 280px;
+  #appletv-logo-desc {
+    margin-bottom: 15px;
   }
   #appletv-link a {
     font-size: 18px;
@@ -170,23 +147,16 @@
     height: 300px;
     background-size: cover;
     margin-top: 0;
-  }
-  #appletv-logo {
-    top: 20px;
+    padding-top: 25px;
   }
   #appletv-logo img {
     max-width: 70%;
-    margin: 0 auto;
-  }
-  #appletv-logo-desc {
-    top: 80px;
   }
   #appletv-logo-desc img {
     max-width: 70%;
-    margin: 0 auto;
   }
-  #appletv-link {
-    top: 240px;
+  #appletv-logo-desc {
+    margin-bottom: 12px;
   }
   #appletv-link a {
     font-size: 16px;
