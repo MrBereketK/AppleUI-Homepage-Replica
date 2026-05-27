@@ -1,37 +1,50 @@
 
-
-.second-page{
+.second-page {
     text-align: center;
     color: white;
-}
-.second-page .first-div{
-    padding-top: 50px;
     background-color: black;
+    overflow: hidden;
+}
+
+.second-page .first-div {
+    padding-top: 50px;
+    padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
 }
-.iphone-pro{
-    width: 100%;
-    height: 450px;
-    background: url("./assets/images/home/iphone11-pro-bg.jpg") no-repeat center;
-    background-size: 220%;
-    background-position: bottom; 
-}
+
 .pro-desc2 {
     font-size: 32px;
     font-weight: normal;
     line-height: 1.3;
 }
+
 #pro-name2 {
     padding-bottom: 10px;
 }
 
-/* Mobile and tab view for the second and third page sections */
+/* Image wrapper — acts as the viewport for the product image */
+.iphone-pro-img-wrapper {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.iphone-pro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+/* Tablet view */
 @media (max-width: 1000px) {
-    .iphone-pro, .iphone-11{
-        background-size: auto 85%;
-        background-position: bottom center;
-        height: 450px;
+    .iphone-pro-img-wrapper {
+        height: 400px;
     }
     .second-page .first-div {
         padding-top: 40px;
@@ -40,11 +53,10 @@
         font-size: 28px;
     }
 }
+
 @media (max-width: 800px) {
-    .iphone-pro, .iphone-11{
-        background-size: auto 85%;
-        background-position: bottom center;
-        height: 400px;
+    .iphone-pro-img-wrapper {
+        height: 350px;
     }
     .second-page .first-div {
         padding-top: 30px;
@@ -55,11 +67,11 @@
         font-size: 24px;
     }
 }
+
+/* Mobile view */
 @media (max-width: 600px) {
-    .iphone-pro, .iphone-11{
-        background-size: auto 85%;
-        background-position: bottom center;
-        height: 350px;
+    .iphone-pro-img-wrapper {
+        height: 300px;
     }
     .second-page .first-div {
         padding-top: 25px;
@@ -70,11 +82,10 @@
         font-size: 20px;
     }
 }
+
 @media (max-width: 480px) {
-    .iphone-pro, .iphone-11{
-        background-size: auto 85%;
-        background-position: bottom center;
-        height: 300px;
+    .iphone-pro-img-wrapper {
+        height: 260px;
     }
     .second-page .first-div {
         padding-top: 20px;

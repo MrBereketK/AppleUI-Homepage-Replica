@@ -1,6 +1,6 @@
 import React from 'react'
-// import iphone11ProImage from './assets/images/iphone/iphone-11-pro.jpg'
 import "./Iphone11Pro.css";
+import iphone11ProBg from './assets/images/home/iphone11-pro-bg.jpg'
 
 export default function Iphone11Pro() {
   return (
@@ -27,8 +27,12 @@ export default function Iphone11Pro() {
             </ul>
           </div>
         </div>
-        <div className="iphone-pro">
-          {/* { //<img src="Image/home/iphone11-pro-bg.jpg" alt="iPhone 11 Pro's picture"> } */}
+        <div className="iphone-pro-img-wrapper">
+          <img
+            src={iphone11ProBg}
+            alt="iPhone 11 Pro"
+            className="iphone-pro-img"
+          />
         </div>
       </section>
     </>
