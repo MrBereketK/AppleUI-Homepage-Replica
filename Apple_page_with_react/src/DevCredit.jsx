@@ -35,6 +35,7 @@ export default function DevCredit() {
 
   return (
     <>
+
       {/* ── Floating GitHub Badge (bottom-right corner) ── */}
       <a
         href={GITHUB_URL}
@@ -61,6 +62,8 @@ export default function DevCredit() {
         </svg>
         <span className="dev-badge-label">MrBereketK</span>
       </a>
+
+
 
       {/* ── Footer Credit Bar ── */}
       <div className="dev-credit-bar">
