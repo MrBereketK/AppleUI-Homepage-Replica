@@ -24,6 +24,26 @@
     display: none;
 }
 
+/* =========================
+   REACT ROUTER NAVLINK STYLES
+   ========================= */
+#header-list a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect for links */
+#header-list a:hover {
+    opacity: 1;
+}
+
+/* Active route indicator — NavLink adds .active class automatically */
+#header-list a.active {
+    opacity: 1;
+}
+
+/* List styling */
 #header-list {
     list-style: none;
     display: flex;
@@ -92,6 +112,7 @@
     .navigation-bar {
         padding: 0 40px;
     }
+
     #header-list li {
         font-size: 11px;
     }
